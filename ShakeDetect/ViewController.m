@@ -44,20 +44,27 @@
 
 }
 
+//do i create a function from this and put in motionEnded?
+-(NSArray*) randomColour {
+    const NSInteger numberOfColour = 100;
+    
+    //
+    
+    NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:numberOfColour];
+    //    wtf is this????
+    for (NSInteger i = 0; i < numberOfColour; i ++) {
+        CGFloat redValue = (arc4random() % 255) / 255.0f;
+        CGFloat blueValue = (arc4random() % 255) / 255.0f;
+        CGFloat greenValue = (arc4random() % 255) / 255.0f;
+        [tempArray addObject:[UIColor colorWithRed:redValue green:greenValue blue:blueValue alpha:1.0f]];
+    }
+    return _colourArray = [NSArray arrayWithArray:tempArray];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     
 }
-
-//-(IBAction)showAlert
-//{
-//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hello World" message:@"This is my first app!" delegate:nil cancelButtonTitle:@"Awesome" otherButtonTitles:nil];
-//    
-//    [alertView show];
-//}
-
-
-
 
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
@@ -70,6 +77,7 @@
     if (motion == UIEventSubtypeMotionShake)
     {
     self.labelOne.text = plistArray[randomValue];
+    cell.backgroundColor = _colour.colourArray[indexPath.item];
     }
 }
 
