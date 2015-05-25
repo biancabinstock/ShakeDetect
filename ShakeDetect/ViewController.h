@@ -14,6 +14,5 @@
 
 @property(strong,nonatomic)UILabel* labelOne;
 
-
 @end
 

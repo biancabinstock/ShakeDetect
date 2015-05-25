@@ -38,10 +38,10 @@
     self.labelOne.text = @"Hello, from Bitnaker Labls";
     [self.view addSubview:_labelOne];
     
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
-//    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
-//    NSMutableArray *plistArray = dict[@"words"];
-//    int randomValue = arc4random() % plistArray.count; // randV is from 0 to number of strings -1 in array
+//    background color
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+
 }
 
 - (void)didReceiveMemoryWarning {
