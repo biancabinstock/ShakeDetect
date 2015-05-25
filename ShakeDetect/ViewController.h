@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+-(BOOL)canBecomeFirstResponder;
+
+@property(strong,nonatomic)UILabel* labelOne;
+
 
 @end
 
