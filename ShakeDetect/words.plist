@@ -12,6 +12,17 @@
 		<string>climb</string>
 		<string>explore</string>
 		<string>dream</string>
+		<string>colour</string>
+		<string>stretch</string>
+		<string>think</string>
+		<string>ponder</string>
+		<string>analyze</string>
+		<string>hug</string>
+		<string>swim</string>
+		<string>create</string>
+		<string>work</string>
+		<string>read</string>
+		<string>observe</string>
 	</array>
 </dict>
 </plist>
