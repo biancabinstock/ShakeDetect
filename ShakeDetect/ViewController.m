@@ -10,9 +10,19 @@
 
 @interface ViewController ()
 
+
+
 @end
 
 @implementation ViewController
+
+//{
+
+//    NSString *Path;
+//    NSDictionary *dict;
+//    NSMutableArray *plistArray;
+//    int randomValue;
+//}
 
 - (BOOL)canBecomeFirstResponder
 {
@@ -28,6 +38,10 @@
     self.labelOne.text = @"Hello, from Bitnaker Labls";
     [self.view addSubview:_labelOne];
     
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
+//    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+//    NSMutableArray *plistArray = dict[@"words"];
+//    int randomValue = arc4random() % plistArray.count; // randV is from 0 to number of strings -1 in array
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,11 +56,20 @@
 //    [alertView show];
 //}
 
+
+
+
+
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    NSMutableArray *plistArray = dict[@"words"];
+    int randomValue = arc4random() % plistArray.count;
     if (motion == UIEventSubtypeMotionShake)
     {
-    _labelOne.text = @"Updated Text";;
+    self.labelOne.text = plistArray[randomValue];
     }
 }
 

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>words</key>
+	<array>
+		<string>sing</string>
+		<string>smile</string>
+		<string>dance</string>
+		<string>laugh</string>
+		<string>jump</string>
+		<string>climb</string>
+		<string>explore</string>
+		<string>dream</string>
+	</array>
+</dict>
+</plist>

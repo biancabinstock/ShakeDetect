@@ -14,6 +14,7 @@
 		96E96A6F1B0FA5BF006B6CA0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E96A6E1B0FA5BF006B6CA0 /* Images.xcassets */; };
 		96E96A721B0FA5BF006B6CA0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E96A701B0FA5BF006B6CA0 /* LaunchScreen.xib */; };
 		96E96A7E1B0FA5BF006B6CA0 /* ShakeDetectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E96A7D1B0FA5BF006B6CA0 /* ShakeDetectTests.m */; };
+		96E96ABA1B12C8DA006B6CA0 /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96E96AB91B12C8DA006B6CA0 /* words.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		96E96A771B0FA5BF006B6CA0 /* ShakeDetectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShakeDetectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E96A7C1B0FA5BF006B6CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E96A7D1B0FA5BF006B6CA0 /* ShakeDetectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeDetectTests.m; sourceTree = "<group>"; };
+		96E96AB91B12C8DA006B6CA0 /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				96E96A661B0FA5BF006B6CA0 /* AppDelegate.m */,
 				96E96A681B0FA5BF006B6CA0 /* ViewController.h */,
 				96E96A691B0FA5BF006B6CA0 /* ViewController.m */,
+				96E96AB91B12C8DA006B6CA0 /* words.plist */,
 				96E96A6B1B0FA5BF006B6CA0 /* Main.storyboard */,
 				96E96A6E1B0FA5BF006B6CA0 /* Images.xcassets */,
 				96E96A701B0FA5BF006B6CA0 /* LaunchScreen.xib */,
@@ -201,6 +204,7 @@
 			files = (
 				96E96A6D1B0FA5BF006B6CA0 /* Main.storyboard in Resources */,
 				96E96A721B0FA5BF006B6CA0 /* LaunchScreen.xib in Resources */,
+				96E96ABA1B12C8DA006B6CA0 /* words.plist in Resources */,
 				96E96A6F1B0FA5BF006B6CA0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +420,7 @@
 				96E96A831B0FA5BF006B6CA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96E96A841B0FA5BF006B6CA0 /* Build configuration list for PBXNativeTarget "ShakeDetectTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +429,7 @@
 				96E96A861B0FA5BF006B6CA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
