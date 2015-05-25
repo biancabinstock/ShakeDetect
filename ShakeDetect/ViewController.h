@@ -14,7 +14,7 @@
 
 @property(strong,nonatomic)UILabel* labelOne;
 @property (strong, nonatomic) NSArray *colourArray;
-@property (strong, nonatomic) Colour *colour;
+//@property (strong, nonatomic) Colour *colour;
 
 -(NSArray*) randomColour;
 @end

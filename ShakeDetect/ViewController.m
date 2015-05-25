@@ -15,14 +15,9 @@
 @end
 
 @implementation ViewController
-
-//{
-
-//    NSString *Path;
-//    NSDictionary *dict;
-//    NSMutableArray *plistArray;
-//    int randomValue;
-//}
+{
+    NSArray *_colors;
+}
 
 - (BOOL)canBecomeFirstResponder
 {
@@ -40,16 +35,14 @@
     
 //    background color
     self.view.backgroundColor = [UIColor yellowColor];
-    
-
+    _colors = [self randomColour];
 }
 
 //do i create a function from this and put in motionEnded?
--(NSArray*) randomColour {
+-(NSArray*)randomColour
+{
     const NSInteger numberOfColour = 100;
-    
     //
-    
     NSMutableArray *tempArray = [NSMutableArray arrayWithCapacity:numberOfColour];
     //    wtf is this????
     for (NSInteger i = 0; i < numberOfColour; i ++) {
@@ -58,14 +51,8 @@
         CGFloat greenValue = (arc4random() % 255) / 255.0f;
         [tempArray addObject:[UIColor colorWithRed:redValue green:greenValue blue:blueValue alpha:1.0f]];
     }
-    return _colourArray = [NSArray arrayWithArray:tempArray];
+    return [NSArray arrayWithArray:tempArray];
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    
-}
-
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
@@ -76,8 +63,9 @@
     int randomValue = arc4random() % plistArray.count;
     if (motion == UIEventSubtypeMotionShake)
     {
-    self.labelOne.text = plistArray[randomValue];
-    cell.backgroundColor = _colour.colourArray[indexPath.item];
+        self.labelOne.text = plistArray[randomValue];
+        NSInteger randomIndex = arc4random() % 100;
+        self.view.backgroundColor = _colors[randomIndex];
     }
 }
 
