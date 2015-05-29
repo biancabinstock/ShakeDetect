@@ -29,8 +29,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.labelOne = [[UILabel alloc]initWithFrame:CGRectMake(50, 30, 200, 44)];
-    self.labelOne.text = @"Hello, from Bitnaker Labls";
+    self.labelOne = [[UILabel alloc]initWithFrame:CGRectMake(50, 150, 200, 70)];
+    self.labelOne.text = @"Shake Me!";
+    [self.labelOne setFont:[UIFont fontWithName:@"Helvetica-Bold" size:40.0]];
+   self.labelOne.textColor = [UIColor whiteColor];
     [self.view addSubview:_labelOne];
     
 //    background color
