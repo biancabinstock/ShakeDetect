@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96BF7A621B18E54300CA5028 /* funkySounds in Resources */ = {isa = PBXBuildFile; fileRef = 96BF7A611B18E54300CA5028 /* funkySounds */; };
+		96BF7A641B18E57F00CA5028 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96BF7A631B18E57F00CA5028 /* AVFoundation.framework */; };
 		96E96A641B0FA5BF006B6CA0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E96A631B0FA5BF006B6CA0 /* main.m */; };
 		96E96A671B0FA5BF006B6CA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E96A661B0FA5BF006B6CA0 /* AppDelegate.m */; };
 		96E96A6A1B0FA5BF006B6CA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E96A691B0FA5BF006B6CA0 /* ViewController.m */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96BF7A611B18E54300CA5028 /* funkySounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = funkySounds; sourceTree = "<group>"; };
+		96BF7A631B18E57F00CA5028 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		96E96A5E1B0FA5BF006B6CA0 /* ShakeDetect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShakeDetect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E96A621B0FA5BF006B6CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96E96A631B0FA5BF006B6CA0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BF7A641B18E57F00CA5028 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 		96E96A551B0FA5BF006B6CA0 = {
 			isa = PBXGroup;
 			children = (
+				96BF7A611B18E54300CA5028 /* funkySounds */,
 				96E96A601B0FA5BF006B6CA0 /* ShakeDetect */,
 				96E96A7A1B0FA5BF006B6CA0 /* ShakeDetectTests */,
 				96E96A5F1B0FA5BF006B6CA0 /* Products */,
@@ -91,6 +97,7 @@
 				96E96A6B1B0FA5BF006B6CA0 /* Main.storyboard */,
 				96E96A6E1B0FA5BF006B6CA0 /* Images.xcassets */,
 				96E96A701B0FA5BF006B6CA0 /* LaunchScreen.xib */,
+				96BF7A631B18E57F00CA5028 /* AVFoundation.framework */,
 				96E96A611B0FA5BF006B6CA0 /* Supporting Files */,
 			);
 			path = ShakeDetect;
@@ -202,6 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BF7A621B18E54300CA5028 /* funkySounds in Resources */,
 				96E96A6D1B0FA5BF006B6CA0 /* Main.storyboard in Resources */,
 				96E96A721B0FA5BF006B6CA0 /* LaunchScreen.xib in Resources */,
 				96E96ABA1B12C8DA006B6CA0 /* words.plist in Resources */,

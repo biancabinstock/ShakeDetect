@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()
 
@@ -17,6 +18,9 @@
 @implementation ViewController
 {
     NSArray *_colors;
+    AVAudioPlayer *_audioPlayer;
+    NSMutableArray *_plistArray;
+    NSMutableArray *_plistSounds;
 }
 
 - (BOOL)canBecomeFirstResponder
@@ -35,9 +39,16 @@
    self.labelOne.textColor = [UIColor whiteColor];
     [self.view addSubview:_labelOne];
     
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+    _plistArray = dict[@"words"];
+    
+    _plistSounds = dict[@"funkySounds"];
+    
 //    background color
     self.view.backgroundColor = [UIColor yellowColor];
     _colors = [self randomColour];
+//    _audioPlayer = [[AVAudioPlayer alloc] init];
 }
 
 //do i create a function from this and put in motionEnded?
@@ -58,16 +69,22 @@
 
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
-    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
-    NSMutableArray *plistArray = dict[@"words"];
-    int randomValue = arc4random() % plistArray.count;
+//    NSString *path = [[NSBundle mainBundle] pathForResource:@"words" ofType:@"plist"];
+//    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+//    NSMutableArray *plistArray = dict[@"words"];
+//    NSMutableArray *plistSounds = dict[@"funkySounds"];
+    int randomValue = arc4random() % _plistArray.count;
+    int randomSound = arc4random() % _plistSounds.count;
     if (motion == UIEventSubtypeMotionShake)
     {
-        self.labelOne.text = plistArray[randomValue];
+        self.labelOne.text = _plistArray[randomValue];
+        self.funkySounds = _plistSounds[randomSound];
         NSInteger randomIndex = arc4random() % 100;
         self.view.backgroundColor = _colors[randomIndex];
+        NSString *folderName = @"funkySounds";
+        NSURL *url = [[NSBundle mainBundle] URLForResource:[folderName stringByAppendingPathComponent:self.funkySounds] withExtension:nil];
+        _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        [_audioPlayer play];
     }
 }
 

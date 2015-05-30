@@ -14,6 +14,8 @@
 
 @property(strong,nonatomic)UILabel* labelOne;
 @property (strong, nonatomic) NSArray *colourArray;
+@property (strong,nonatomic)NSString *funkySounds;
+
 //@property (strong, nonatomic) Colour *colour;
 
 -(NSArray*) randomColour;
